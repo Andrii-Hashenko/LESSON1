@@ -1,32 +1,37 @@
-/* палитра */
-/* рут */
-
-/* стилі для всієї сторінки */
-body {
-
+.body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background: #E5E5E5;
 }
-
-a {
+.link {
     text-decoration: none;
 }
-
-li {
-    list-style: none;
+.header-list-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
 }
-
-address {
-    font-style: normal;
+.list-active-link {
+    color: #FF6C00;
 }
+.header-tel-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.header-button {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: inherit;
 
-/* HEADER */
-
-/* MAIN */
-/* hero */
-/* about */
-/* prices */
-/* people come to us */
-/* barber */
-/* in Latin */
-/* online-booking */
-
-/* FOOTER */
+}
