@@ -1,37 +1,111 @@
+/* GENERAL */
 .body {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    background: #E5E5E5;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  background: #e5e5e5;
 }
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
+.list {
+  list-style: none;
+}
+/* HEADER */
 .header-list-link {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(16 / 12);
-    letter-spacing: 0.1em;
-    color: #FFFFFF;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  color: #ffffff;
 }
-.list-active-link {
-    color: #FF6C00;
+.header-list-link:hover,
+.header-list-link:focus {
+  color: #ff6c00;
 }
+
 .header-tel-link {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(16 / 12);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #FFFFFF;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 .header-button {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(16 / 12);
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    font-family: inherit;
-
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: inherit;
 }
+/* HERO */
+.hero-list-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  color: #303030;
+  transform: rotate(-90deg);
+}
+.hero-list-link:hover,
+.hero-list-link:focus {
+  color: #ff6c00;
+}
+.hero-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+.hero-title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.hero-text {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  color: #9da4bd;
+}
+/* ABOUT */
+.about-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: #303030;
+}
+.about-title {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+.about-after-title {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  color: #555555;
+}
+.about-text {
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  color: #555555;
+}
+.about-button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #303030;
+}
+/* PRICES */
+.
