@@ -1,9 +1,15 @@
 /* GENERAL */
+:root {
+  --main-color: #303030;
+  --header-color: #ffffff;
+  --second-color: #555555;
+}
 .body {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.02em;
+  text-transform: uppercase;
   background: #e5e5e5;
 }
 .link {
@@ -12,13 +18,27 @@
 .list {
   list-style: none;
 }
+.button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  font-family: inherit;
+}
+.title {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+}
 /* HEADER */
 .header-list-link {
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
-  color: #ffffff;
+  color: var(--header-color);
 }
 .header-list-link:hover,
 .header-list-link:focus {
@@ -30,24 +50,17 @@
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #ffffff;
+  color: var(--header-color);
 }
 .header-button {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: calc(16 / 12);
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-family: inherit;
+  color: var(--header-color);
 }
 /* HERO */
 .hero-list-link {
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
-  color: #303030;
+  color: var(--main-color);
   transform: rotate(-90deg);
 }
 .hero-list-link:hover,
@@ -58,15 +71,13 @@
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
 }
 .hero-title {
-  font-weight: 700;
   font-size: 72px;
   line-height: calc(85 / 72);
-  letter-spacing: 0.05em;
-  color: #ffffff;
+
+  color: var(--header-color);
 }
 .hero-text {
   font-size: 18px;
@@ -78,34 +89,58 @@
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
-  text-transform: uppercase;
-  color: #303030;
+  color: var(--main-color);
 }
 .about-title {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 42px;
-  line-height: calc(49 / 42);
-  letter-spacing: 0.05em;
-  color: #303030;
+  color: var(--main-color);
 }
 .about-after-title {
   font-size: 18px;
   line-height: calc(30 / 18);
-  color: #555555;
+  color: var(--second-color);
 }
 .about-text {
   font-size: 14px;
   line-height: calc(26 / 14);
-  color: #555555;
+  color: var(--second-color);
 }
 .about-button {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: calc(16 / 12);
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #303030;
+  color: var(--main-color);
 }
 /* PRICES */
-.
+.services-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  color: rgba(157, 164, 189, 0.6);
+}
+.services-title {
+  color: var(--header-color);
+}
+.services-text {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  color: #9da4bd;
+}
+.services-text-right {
+  text-align: right;
+}
+.services-button {
+  color: var(--header-color);
+}
+/* people come to us */
+/* Barber */
+/* In Latin */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
