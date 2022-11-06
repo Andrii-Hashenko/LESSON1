@@ -11,20 +11,24 @@
   --button-second-color: #303030;
   --specific-ident: 20px;
 }
+
 h1,
 h2,
 p {
   margin: 0;
 }
+
 .page-body {
   font-family: "Open Sans", sans-serif;
-  background: #e5e5e5;
 }
+
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  outline: 1px solid red;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -84,26 +88,45 @@ p {
   text-transform: var(--pre-title-case);
 }
 
-/* Header styles */
+.pre-title::before {
+  content: " ";
+  display: inline-block;
+  height: 1px;
+  width: 60px;
+  background-color: var(--main-color);
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+/* header, фон з секції hero за допомогою css */
+
 .page-header {
   padding: 32px 0;
+  background-color: #9da4bd;
+  /* background-color: #FFFFFF; */
 }
+
 .page-header .container {
   display: flex;
   align-items: center;
 }
+
 .header-logo {
   margin-right: 120px;
 }
+
 .header-list {
   display: flex;
 }
+
 .header-list .item:not(:first-child) {
   margin-left: 25px;
 }
+
 .header-contacts {
   margin-left: auto;
 }
+
 .header-link {
   font-weight: 600;
   font-size: 12px;
@@ -121,14 +144,17 @@ p {
   color: var(--button-first-color);
   margin-left: 35px;
 }
+/* main */
+/* HERO */
 
-/* Hero styles */
 .hero .container {
   display: flex;
 }
+
 .hero-list {
   width: 100px;
 }
+
 .hero .list-link {
   font-weight: 600;
   font-size: 11px;
@@ -141,16 +167,30 @@ p {
 .hero .list-link:focus {
   color: var(--accent-color);
 }
+
 .hero-description {
   padding-top: 176px;
   padding-left: 200px;
   padding-right: 50px;
   padding-bottom: 210px;
+  background-color: #2d2c2c;
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(../img/hero-description-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   flex-grow: 1;
 }
+
 .hero .pre-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: var(--specific-ident);
+}
+
+.hero .pre-title::before {
+  background-color: rgba(157, 164, 189, 0.6);
 }
 
 .hero .title {
@@ -169,14 +209,17 @@ p {
   max-width: 360px;
 }
 
-/* About styles */
+/* ABOUT */
+
 .about {
   padding: 120px 0;
 }
+
 .about .container {
   display: flex;
   align-items: flex-start;
 }
+
 .about .pre-title {
   color: var(--main-color);
   margin-bottom: var(--specific-ident);
@@ -194,6 +237,7 @@ p {
   color: var(--second-color);
   margin-bottom: var(--specific-ident);
 }
+
 .about-img {
   margin-right: 30px;
 }
@@ -210,10 +254,17 @@ p {
   color: var(--button-second-color);
 }
 
-/* Services styles */
+/* PRICES */
+
 .services {
+  background-color: rgb(17, 19, 25);
+  background-image: url(../img/services-bg.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 120px 0;
 }
+
 .services .pre-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: var(--specific-ident);
@@ -223,23 +274,36 @@ p {
   color: var(--title-first-color);
   margin-bottom: 44px;
 }
-.services-list .item:not(:last-child) {
-  margin-bottom: var(--specific-ident);
-}
-.services-list .item {
-  display: flex;
-  justify-content: space-between;
-}
+
 .services .our-price {
   display: flex;
   margin-right: -30px;
 }
+
 .services-list {
   padding: 30px 20px;
+  width: calc((100% - 60px) / 2);
   margin-right: 30px;
-  width: calc((100%-30px) / 2);
   margin-bottom: 44px;
 }
+
+.services-first {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.services-second {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.services-list .item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.services-list .item {
+  display: flex;
+  justify-content: space-between;
+}
+
 .services .text {
   font-size: 18px;
   line-height: calc(30 / 18);
@@ -253,7 +317,39 @@ p {
   margin: auto;
 }
 
-/* Benefits styles */
+/* people come to us */
+.benefits-container {
+  display: flex;
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 130px;
+}
+
+.benefits-description {
+  max-width: 550px;
+}
+
+.benefits-list .item {
+  background-color: #f7f7f7;
+  width: 170px;
+  height: 133px;
+  text-align: center;
+  padding: 20px 24px;
+}
+
+.benefits-list .item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-list .item:nth-child(even) {
+  margin-top: 30px;
+}
 
 .benefits-list .number {
   font-weight: 700;
@@ -292,38 +388,73 @@ p {
   color: var(--second-color);
 }
 
-/* Barbers styles */
+/* Barber */
+
 .barbers {
   padding: 120px 0;
+  background-color: #f7f7f7;
 }
+
 .barbers .pre-title {
   color: var(--main-color);
-  margin-bottom: var(--specific-ident);
 }
 
 .barbers .title {
   color: var(--title-second-color);
-  margin-bottom: 44px;
 }
 
 .barber-list {
   display: flex;
   margin-left: -30px;
 }
+
 .barber-list .item {
-  width: calc((100%-30px) / 3);
+  flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
 }
-.barber-img {
-  margin-bottom: 30px;
+
+.barber-list .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
+
+.barber-list .social-item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.barber-list .social-item:last-child {
+  margin-right: 0;
+}
+
+.barber-list .social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--main-color);
+}
+
+.barber-list .social-icon {
+  fill: currentColor;
+}
+
+.barber-list .social-link:hover,
+.barber-list .social-link:focus {
+  color: var(--accent-color);
+}
+
 .barber-name {
   font-size: 18px;
   line-height: calc(25 / 18);
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-color);
-  margin-bottom: 8px;
 }
 
 .barber-position {
@@ -334,19 +465,80 @@ p {
   color: var(--accent-color);
 }
 
-/* Gallery styles */
+/* In Latin */
+
 .gallery {
   padding: 120px 0;
 }
+
 .gallery .pre-title {
   color: var(--main-color);
   margin-bottom: 44px;
 }
+
 .gallery-images {
   display: flex;
   margin-right: -30px;
 }
-.gallery-images img {
-  flex-basis: calc((100%-30px) / 4);
+
+.gallery-images .img {
+  flex-basis: calc((100% - 120px) / 4);
   margin-right: 30px;
 }
+
+/* Online-booking Contacts */
+
+.booking-contacts {
+  background-color: #191c26;
+  display: flex;
+  justify-content: space-between;
+  height: 634px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.booking-contacts .contacts {
+  width: 50%;
+  background-image: url(../img/contacts-bg.png);
+}
+
+.contacts {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  padding-left: 100px;
+}
+
+.contacts .title {
+  color: var(--title-first-color);
+  margin-bottom: 40px;
+}
+
+.contacts .contact-address {
+  font-style: normal;
+}
+
+.contacts .address-item {
+  margin-bottom: 20px;
+}
+
+.contacts .address-link {
+  display: flex;
+  align-items: center;
+  color: #9da4bd;
+}
+
+.contacts .address-link:hover {
+  color: var(--accent-color);
+}
+
+.contacts .icon {
+  margin-right: 16px;
+  fill: none;
+  stroke: currentColor;
+}
+
+.contacts .address-link:hover,
+.contacts .address-link:focus {
+  color: var(--accent-color);
+}
+/* footer */
