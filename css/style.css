@@ -26,7 +26,6 @@ p {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  outline: 1px solid red;
 }
 
 .visually-hidden {
@@ -98,11 +97,12 @@ p {
   vertical-align: middle;
 }
 
-/* header, фон з секції hero за допомогою css */
+/* header */
 
 .page-header {
   padding: 32px 0;
-  background-color: #9da4bd;
+  position: absolute;
+  width: 100%;
   /* background-color: #FFFFFF; */
 }
 
@@ -133,11 +133,13 @@ p {
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
   color: #ffffff;
+  transition: color 500ms linear;
 }
 
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
+
 }
 
 .header-button {
@@ -150,11 +152,33 @@ p {
 .hero .container {
   display: flex;
 }
-
-.hero-list {
+.hero .social-wrapper {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 25px;
+  margin-bottom: 40px;
+}
+.hero-list {
+  display: flex;
+  transform: rotate(-90deg) translateX(19px);
+  transform-origin: top left;
+  align-items: center;
+  position: relative;
 }
 
+.hero-list::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: var(--main-color);
+  left: -40px;
+  top: 10px;
+}
+.hero-list .item {
+  margin-left: 40px;
+}
 .hero .list-link {
   font-weight: 600;
   font-size: 11px;
