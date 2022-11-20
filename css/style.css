@@ -515,15 +515,87 @@ p {
 .booking-contacts {
   background-color: #191c26;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   height: 634px;
   background-repeat: no-repeat;
   background-position: right;
 }
-
-.booking-contacts .contacts {
+.container .booking {
+  display: inline-block;
   width: 50%;
+  padding-top: 130px;
+ 
+}
+.container .contacts {
+  width: 50%;
+  display: inline-block;
+  margin-left: auto;
   background-image: url(../img/contacts-bg.png);
+} 
+
+
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.booking-form input {
+  padding-bottom: 8px;
+}
+
+.booking-form input,
+.booking-form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+  border-bottom: 1px solid #fff;
+  outline: transparent;
+  color: #fff;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.booking-form input:focus::placeholder,
+.booking-form textarea:focus::placeholder {
+  color: #fff;
+}
+
+.booking-form input {
+  width: 270px;
+  height: 24px;
+  margin-bottom: 44px;
+}
+
+.booking-form .textarea-wrapper {
+  width: 100%;
+  margin-bottom: 44px;
+}
+
+.booking-form textarea {
+  width: 570px;
+  height: 76px;
+  resize: none;
+  display: block;
+}
+
+.booking-form .button {
+  display: inline-block;
+  color: var(--button-first-color);
+}
+
+.booking-form .name-input + input {
+  margin-left: 30px;
 }
 
 .contacts {
@@ -532,10 +604,12 @@ p {
   padding-left: 100px;
 }
 
-.contacts .title {
+.contacts .title,
+.booking .title {
   color: var(--title-first-color);
   margin-bottom: 40px;
 }
+
 
 .contacts .contact-address {
   font-style: normal;
@@ -566,3 +640,160 @@ p {
   color: var(--accent-color);
 }
 /* footer */
+
+/* MODAL */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 500ms, visibility 500ms;
+}
+
+.modal-backdrop.is-hidden .modal {
+  transform: rotate(-180deg);
+}
+
+.modal {
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  transition: transform 1000ms linear;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.modal .close-sign {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-form {
+  padding: 50px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #303030;
+  padding: 10px;
+  padding-left: 25px;
+  font-size: 12px;
+  color: #ff6c00;
+  font-weight: bold;
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #303030;
+  resize: none;
+  padding: 10px;
+  font-size: 12px;
+  color: #ff6c00;
+  font-weight: bold;
+}
+
+.modal-input::placeholder,
+.modal-textarea::placeholder {
+  font-size: 14px;
+  font-weight: normal;
+  color: blue;
+}
+
+.modal-label,
+.label-span {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.sizes {
+  margin: 20px 0;
+}
+
+.select-cities {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-wrapper input {
+  margin-bottom: 0;
+}
+
+.input-icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #212121;
+}
+
+.modal-input:focus + .input-icon,
+.modal-input:hover + .input-icon {
+  fill: orange;
+}
+
+.check-line {
+  margin: 10px 0;
+}
+
+.checkbox-agree {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-agree .icon-wrapper {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-agree .agree-icon {
+  fill: transparent;
+}
+
+.check-line input:checked + .checkbox-agree .icon-wrapper {
+  background-color: orange;
+  border: none;
+}
+
+.check-line input:checked + .checkbox-agree .agree-icon {
+  fill: #ffffff;
+}
