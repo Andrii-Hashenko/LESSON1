@@ -515,7 +515,6 @@ p {
 .booking-contacts {
   background-color: #191c26;
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
   height: 634px;
   background-repeat: no-repeat;
@@ -530,7 +529,7 @@ p {
 .container .contacts {
   width: 50%;
   display: inline-block;
-  margin-left: auto;
+  margin-right: auto;
   background-image: url(../img/contacts-bg.png);
 } 
 
