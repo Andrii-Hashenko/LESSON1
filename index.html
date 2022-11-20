@@ -385,7 +385,29 @@
       <!-- Online-booking Contacts -->
       <section class="booking-contacts">
         <section class="booking">
-          <h2>Online-booking</h2>
+          <h2 class="title second-title">Online-booking</h2>
+          <form name="booking-form" class="booking-form">
+            <input
+              type="text"
+              name="name-input"
+              class="name-input"
+              placeholder="Name*"
+            />
+            <input
+              type="tel"
+              name="tel-input"
+              class="tel-input"
+              placeholder="Phone*"
+            />
+            <div class="textarea-wrapper">
+              <textarea
+                name="booking-text"
+                id="booking-text"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="button">send</button>
+          </form>
         </section>
         <section class="contacts">
           <h2 class="title second-title">Contacts</h2>
@@ -451,6 +473,71 @@
         </ul>
       </div>
     </footer>
+    <div class="modal-backdrop is-hidden" data-modal>
+      <div class="modal">
+        <div class="close-sign" data-modal-close>Х</div>
+        <form name="form-buy" class="modal-form">
+          <div class="input-line">
+            <label for="user-name" class="modal-label">Name</label>
+            <div class="input-wrapper">
+              <input
+                name="user-name"
+                type="text"
+                placeholder="Enter Name"
+                class="modal-input"
+                required
+              />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./img/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="input-line">
+            <label for="user-tel" class="modal-label">Phone</label>
+            <input
+              name="user-tel"
+              id="user-tel"
+              type="tel"
+              class="modal-input"
+              title="+38 (---) -- -- ---"
+              value="+380"
+              required
+            />
+          </div>
+          <div class="input-line">
+            <label for="user-mail" class="modal-label">Email</label>
+            <input
+              name="user-mail"
+              id="user-mail"
+              type="email"
+              class="modal-input"
+              placeholder="Enter Email"
+            />
+          </div>
+          <textarea name="user-text" id="user-text" class="modal-textarea">
+I think you need to improve</textarea
+          >
+          <div class="input-line check-line">
+            <input
+              id="checkbox-agree"
+              value="agree"
+              name="checkbox-agree"
+              type="checkbox"
+              class="visually-hidden"
+            />
+            <label for="checkbox-agree" class="checkbox-agree">
+              <span class="icon-wrapper">
+                <svg class="agree-icon" width="13" height="9">
+                  <use href="./img/icons.svg#icon-check-mark"></use>
+                </svg>
+              </span>
+              Погоджуюся з правилами</label
+            >
+          </div>
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
