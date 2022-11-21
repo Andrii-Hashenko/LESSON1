@@ -514,19 +514,23 @@ p {
 
 .booking-contacts {
   background-color: #191c26;
-  display: flex;
-  justify-content: space-between;
+  
   height: 634px;
   background-repeat: no-repeat;
   background-position: right;
 }
-.container .booking {
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-box {
   display: inline-block;
   width: 50%;
   padding-top: 130px;
  
 }
-.container .contacts {
+.contacts-box {
   width: 50%;
   display: inline-block;
   margin-right: auto;
