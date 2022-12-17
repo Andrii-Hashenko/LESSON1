@@ -35,16 +35,18 @@
         <nav class="header-nav">
           <ul class="header-list list">
             <li class="item">
-              <a class="header-link link" href="#">About</a>
+              <a class="header-link link" href="#about">About</a>
             </li>
             <li class="item">
-              <a class="header-link link" href="#">Services and prices</a>
+              <a class="header-link link" href="#services"
+                >Services and prices</a
+              >
             </li>
             <li class="item">
-              <a class="header-link link" href="#">Barbers</a>
+              <a class="header-link link" href="#barbers">Barbers</a>
             </li>
             <li class="item">
-              <a class="header-link link" href="#">Contacts</a>
+              <a class="header-link link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -52,7 +54,7 @@
           <a class="header-tel header-link link" href="tel.:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="header-button button" type="button">
+          <button class="header-button button" type="button" data-modal-open>
             Online-booking
           </button>
         </div>
@@ -97,7 +99,7 @@
         </div>
       </section>
       <!-- ABOUT -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <img
             class="about-img"
@@ -127,7 +129,11 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="about-button second-button button" type="button">
+            <button
+              class="about-button second-button button"
+              type="button"
+              data-modal-open
+            >
               Online-booking
             </button>
           </div>
@@ -177,7 +183,7 @@
             </ul>
           </div>
 
-          <button class="services-button button" type="button">
+          <button class="services-button button" type="button" data-modal-open>
             Online-booking
           </button>
         </div>
@@ -214,19 +220,25 @@
         </div>
       </section>
       <!-- Barber -->
-      <section class="barbers">
+      <section class="barbers" id="barbers">
         <div class="container">
           <p class="pre-title">For true enjoyers of the atmosphere</p>
           <h2 class="title second-title">Our barbers</h2>
           <ul class="barber-list list">
             <li class="item">
-              <img
-                class="barber-img"
-                src="./img/john.jpg"
-                alt="john"
-                width="370"
-                height="346"
-              />
+              <div class="img-wrapper">
+                <img
+                  class="barber-img"
+                  src="./img/john.jpg"
+                  alt="john"
+                  width="370"
+                  height="346"
+                />
+                <div class="barber-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit, accusantium!
+                </div>
+              </div>
               <p class="barber-name">John Smith</p>
               <p class="barber-position">Extreme Barber</p>
               <ul class="social-icons list">
@@ -383,7 +395,7 @@
         </div>
       </section>
       <!-- Online-booking Contacts -->
-      <section class="booking-contacts">
+      <section class="booking-contacts" id="contacts">
         <div class="container">
           <div class="box">
             <div class="booking-box">
