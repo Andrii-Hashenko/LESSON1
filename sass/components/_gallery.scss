@@ -1,0 +1,21 @@
+/* In Latin */
+
+.gallery {
+    padding: 120px 0;
+  }
+  
+  .gallery__pre-title {
+    color: var(--main-color);
+    margin-bottom: 44px;
+  }
+  
+  .gallery-images {
+    display: flex;
+    margin-right: -30px;
+  }
+  
+  .gallery-images__img {
+    flex-basis: calc((100% - 120px) / 4);
+    margin-right: 30px;
+  }
+  

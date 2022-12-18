@@ -1,0 +1,75 @@
+/* people come to us */
+.benefits__container {
+  display: flex;
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 130px;
+}
+
+.benefits-description {
+  max-width: 550px;
+}
+
+.benefits-list__item {
+  background-color: #f7f7f7;
+  width: 170px;
+  height: 133px;
+  text-align: center;
+  padding: 20px 24px;
+}
+
+.benefits-list__item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-list__item:nth-child(even) {
+  margin-top: 30px;
+}
+
+.benefits-list__number {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  letter-spacing: 0.05em;
+  color: var(--main-color);
+}
+
+.benefits-list__sing {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* не спозиционировано */
+  color: #ff6c00;
+}
+
+.benefits-list__text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  color: var(--main-color);
+}
+
+.benefits-description__pre-title {
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.benefits-description__title {
+  color: var(--title-second-color);
+  margin-bottom: 20px;
+}
+
+.benefits-description__after-title {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: var(--second-color);
+}

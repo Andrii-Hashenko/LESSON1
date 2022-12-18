@@ -1,0 +1,54 @@
+/* ABOUT */
+
+.about {
+  padding: 120px 0;
+}
+
+.about .container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-description__pre-title {
+  color: var(--main-color);
+  margin-bottom: var(--specific-ident);
+}
+
+.about-description__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+  padding-right: 100px;
+  margin-bottom: var(--specific-ident);
+}
+
+.about-description__after-title {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: var(--second-color);
+  margin-bottom: var(--specific-ident);
+  padding-right: 100px;
+}
+
+.about__img {
+  margin-right: 30px;
+}
+
+.about-description__text {
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.02em;
+  color: var(--second-color);
+  margin-bottom: 42px;
+  padding-right: 100px;
+}
+
+.about__button {
+  color: var(--button-second-color);
+}
